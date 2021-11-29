@@ -7,7 +7,7 @@ func ConfigRoutes(router *gin.Engine) *gin.Engine {
 	{
 		books := main.Group("books")
 		{
-			books.GET("/")
+			books.GET("/", controllers.ShowBook)
 		}
 	}
 	return router
