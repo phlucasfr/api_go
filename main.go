@@ -1,6 +1,6 @@
 package main
 
-import "github.com/phlucasfr/api_go/server"
+import "api_go/server"
 
 func main() {
 	server := server.NewServer()

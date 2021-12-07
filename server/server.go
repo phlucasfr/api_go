@@ -1,10 +1,10 @@
 package server
 
 import (
+	"api_go/server/routes"
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/phlucasfr/api_go/server/routes"
 )
 
 type Server struct {
@@ -22,6 +22,6 @@ func NewServer() Server {
 func (s *Server) Run() {
 	router := routes.ConfigRoutes(s.server)
 
-	log.Printf("server is runnig at port: %v", s.port)
+	log.Print("Server is running at port:", s.port)
 	log.Fatal(router.Run(":" + s.port))
 }
